@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import SmurfForm from './SmurfForm';
-import { S } from "xmlchars/xml/1.0/ed5";
+
 
 class App extends Component {
   render() {
