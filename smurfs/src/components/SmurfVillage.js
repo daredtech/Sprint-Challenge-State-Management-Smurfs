@@ -15,7 +15,7 @@ const SmurfVillage = (props) => {
     <Grid>
     <Grid.Row>
       <Grid.Column>
-        
+
         {props.smurfsCollection && (props.smurfsCollection.map(smurf => <SmurfCard key={smurf.name} smurf={smurf}></SmurfCard>))}
   
       </Grid.Column>
@@ -24,12 +24,12 @@ const SmurfVillage = (props) => {
   </>
   )
 
- 
   }
 
 const mapStateToProps = state => {
   return {
-      ...state
+      ...state,
+
   };
 };
 

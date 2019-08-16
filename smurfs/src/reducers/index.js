@@ -1,5 +1,11 @@
 
-import {GET_SMURF_DATA_REQUEST, GET_SMURF_DATA_SUCCESS, GET_SMURF_DATA_FAILURE} from '../actions';
+import {
+    GET_SMURF_DATA_REQUEST, 
+    GET_SMURF_DATA_SUCCESS, 
+    GET_SMURF_DATA_FAILURE,
+    POST_SMURF_DATA_REQUEST,
+    POST_SMURF_DATA_SUCCESS,
+    POST_SMURF_DATA_FAILURE} from '../actions';
 
 const initialState = {
     smurfsCollection: [],
@@ -16,15 +22,21 @@ const reducer = (state = initialState, action) =>{
                 return{
                     ...state
                 }
-            case GET_SMURF_DATA_SUCCESS:
+        case GET_SMURF_DATA_SUCCESS:
                     return{
                         ...state,
                         smurfsCollection: action.payload
                     }
-            case GET_SMURF_DATA_FAILURE:
+        case GET_SMURF_DATA_FAILURE:
                     return{
                         ...state
                     }
+        case POST_SMURF_DATA_REQUEST:
+                return{
+                    ...state
+                }
+
+
 
 
 
