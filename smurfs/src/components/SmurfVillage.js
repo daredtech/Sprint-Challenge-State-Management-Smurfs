@@ -6,7 +6,6 @@ import { getData } from "../actions";
 
 
 const SmurfVillage = (props) => {
-
   console.log('props received: ', props);
 
   return(
@@ -16,14 +15,16 @@ const SmurfVillage = (props) => {
     <Grid>
     <Grid.Row>
       <Grid.Column>
-      <SmurfCard />
-      <SmurfCard />
+        
+        {props.smurfsCollection && (props.smurfsCollection.map(smurf => <SmurfCard key={smurf.name} smurf={smurf}></SmurfCard>))}
+  
       </Grid.Column>
     </Grid.Row>
   </Grid>
   </>
   )
 
+ 
   }
 
 const mapStateToProps = state => {
