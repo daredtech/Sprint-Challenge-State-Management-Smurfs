@@ -26,6 +26,7 @@ export const getData = () => {
     };
   };
   
+  
 export const postData = (values) => {
   console.log('postingData');
   console.log('values received: ', values);

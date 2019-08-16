@@ -12,15 +12,9 @@ const SmurfVillage = (props) => {
   <>
     <button onClick={props.getData} > show village</button>
     
-    <Grid>
-    <Grid.Row>
-      <Grid.Column>
-
-        {props.smurfsCollection && (props.smurfsCollection.map(smurf => <SmurfCard key={smurf.name} smurf={smurf}></SmurfCard>))}
-  
-      </Grid.Column>
-    </Grid.Row>
-  </Grid>
+    <div className='grid'>
+    {props.smurfsCollection && (props.smurfsCollection.map(smurf => <SmurfCard key={smurf.name} smurf={smurf}></SmurfCard>))}
+    </div>
   </>
   )
 

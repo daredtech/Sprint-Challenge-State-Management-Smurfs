@@ -6,7 +6,7 @@ import { postData } from "../actions";
 function SmurfForm (props) {
     return(
         <Form className='smurfForm'>
-        {/* <h3> Add Smurf To Your Village: </h3> */}
+        <h3> Add Smurf To Your Village: </h3>
 
         <Field type='text' name='name' placeholder='surf name' />
         <Field type='number' name='age' placeholder='smurf age' />
@@ -23,7 +23,7 @@ const FormikSmurfForm = withFormik({
 
     handleSubmit(values, {setStatus}){
         console.log('submitting the following values: ', values);
-        postData(values);
+        postData(values);    
     },
 
     mapPropsToValues(name, age, height){

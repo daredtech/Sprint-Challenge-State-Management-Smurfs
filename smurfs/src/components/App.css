@@ -1,5 +1,13 @@
-.App {
-  text-align: center;
+.App{
+  margin: 5%;
+}
+
+.grid{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
 }
 
 .App-logo {
