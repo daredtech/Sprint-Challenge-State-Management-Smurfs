@@ -41,6 +41,10 @@ const mapStateToProps = (state) => {
     };
   };
 
+export default connect(
+    mapStateToProps, 
+    { postData })
+    (FormikSmurfForm);
 
 
-export default connect(mapStateToProps, { postData })(FormikSmurfForm);
+

@@ -26,27 +26,20 @@ export const getData = () => {
     };
   };
   
+export const postData = (values) => {
+  console.log('postingData');
+  console.log('values received: ', values);
 
-  export const postData = (values) => {
-    console.log('postingData');
-    console.log('values received: ', values)
-    return dispatch => {
-      dispatch({ type: POST_SMURF_DATA_REQUEST });
-      axios
-      .post('http://localhost:3333/smurfs', values)
+  axios
+  .post('http://localhost:3333/smurfs', values)
+  
+  .then(request => {
+    console.log('SUCCESS! posting request result: ', request);
+    
+  })
 
-      .then(request => {
-        console.log('SUCCESS! posting request result: ', request);
-        dispatch({ type: POST_SMURF_DATA_SUCCESS });
-      })
-
-      .catch(error => {
-        console.log('OOOOOOPS! got the error: ', error);
-        dispatch({ type: POST_SMURF_DATA_FAILURE });
-      });
-
-    }
-
-
-
-  }
+  .catch(error => {
+    console.log('OOOOOOPS! got the error: ', error);
+  
+  });
+}

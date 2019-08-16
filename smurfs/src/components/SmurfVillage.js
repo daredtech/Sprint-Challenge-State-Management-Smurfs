@@ -29,7 +29,6 @@ const SmurfVillage = (props) => {
 const mapStateToProps = state => {
   return {
       ...state,
-
   };
 };
 

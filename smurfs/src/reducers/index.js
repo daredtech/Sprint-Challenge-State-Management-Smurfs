@@ -35,11 +35,14 @@ const reducer = (state = initialState, action) =>{
                 return{
                     ...state
                 }
-
-
-
-
-
+        case POST_SMURF_DATA_SUCCESS:
+        return{
+            ...state
+        }
+        case POST_SMURF_DATA_FAILURE:
+                return{
+                    ...state
+                }
 
         default:
             return state;
