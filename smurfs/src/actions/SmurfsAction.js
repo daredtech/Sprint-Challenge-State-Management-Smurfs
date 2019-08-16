@@ -5,6 +5,7 @@ export const GET_SMURF_DATA_SUCCESS = 'GET_SMURF_DATA_SUCCESS';
 export const GET_SMURF_DATA_FAILURE = 'GET_SMURF_DATA_FAILURE';
 
 export const getData = () => {
+  console.log('gettingData');
     return dispatch => {
       dispatch({ type: GET_SMURF_DATA_REQUEST });
       axios
